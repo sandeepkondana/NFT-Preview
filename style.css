@@ -23,6 +23,55 @@ body{
 
 }
 
+
+/* .image:hover::after{
+    opacity: 1;
+    top: 0;
+}
+
+.image::after{
+    content: "";
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    z-index: 2;
+    border-radius: 0.4em;
+    background-color: hsla(178, 100%, 50%, 0.5);
+    background-image: url('./images/icon-view.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+    pointer-events: none;
+} */
+
+
+
+.image:hover::after{
+    opacity: 1;
+    
+}
+
+.image::after{
+    content: "";
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: hsl(178, 100%, 50%, 0.5);
+    background-image: url('./images/icon-view.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0;
+    z-index: 2;
+    /* pointer-events: none; */
+    border-radius: 1rem;
+    transition: all 0.5s cubic-bezier(.35,0,.5,.99);
+}
+
+
+
 .main-container{
     max-width: 375px;
     background-color: hsl(216, 50%, 16%);
@@ -36,6 +85,11 @@ h2{
     padding: 30px 0px 20px 0px;
 }
 
+h2:hover{
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
+}
+
 .main-para{
     color: hsl(215, 51%, 70%);
     font-size: 18px;
@@ -47,6 +101,7 @@ h2{
     display: flex;
     justify-content: space-between;  
     margin-bottom: 1em; 
+    align-items: center;
 }
 
 .eth_container{
@@ -57,17 +112,44 @@ h2{
 
 .eth{
     margin-left: .5em;
+    color: hsl(178, 100%, 50%);
+    font-weight: 400;
 }
-
 .time-container{
     display: flex;
+    flex-direction: row;
+    color: hsl(215, 51%, 70%);
 }
+
 .time{
     margin-left: .5em;
 }
+hr{
+    border-color: hsl(215, 32%, 27%);
+}
 
-
-
+.creator{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+}
+.creator-name{
+    color: hsl(215, 51%, 70%);
+    margin-left: 10px;
+    margin-top: 5px;
+}
+.creator img{
+    height: 2em;
+    border: .1em solid white;
+    border-radius: 100%;
+}
+.jules{
+    color: white;
+}
+.jules:hover{
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
+}
 
 .attribution{
     color: white;
